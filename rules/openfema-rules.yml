@@ -1,0 +1,26 @@
+name: OpenFEMA API Rules
+description: >-
+  Operational and design rules for working with the OpenFEMA API.
+api: openfema
+rules:
+  - id: pagination-top-limit
+    description: The $top parameter is capped at 1000 records per request.
+    severity: error
+  - id: skip-pagination
+    description: Use $skip in increments of $top for stable pagination through large datasets.
+    severity: warning
+  - id: filter-syntax
+    description: $filter expressions follow OData-style syntax with eq, ne, gt, lt, ge, le, and, or operators.
+    severity: info
+  - id: prefer-select
+    description: Use $select to limit returned fields and reduce payload size for large queries.
+    severity: warning
+  - id: format-response
+    description: Default response format is JSON; use $format=csv for spreadsheet-friendly output.
+    severity: info
+  - id: dataset-versioning
+    description: Datasets are versioned independently (v1, v2). Always use the highest stable version available.
+    severity: warning
+  - id: no-authentication
+    description: OpenFEMA does not require API keys; usage is public and rate-limited at the network layer.
+    severity: info

@@ -1,48 +1,57 @@
 # Federal Emergency Management Agency (federal-emergency-management-agency)
-The Federal Emergency Management Agency (FEMA) employs more than 20,000 people nationwide. Headquartered in Washington, D.C., we have 10 regional offices located across the country. We leverage a tremendous capacity to coordinate within the federal government to make sure America is equipped to prepare for and respond to disasters.
 
-**URL:** [Visit APIs.json URL](
-https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/apis.yml)
+The Federal Emergency Management Agency (FEMA) coordinates the federal government's role in preparing for, preventing, mitigating, responding to, and recovering from disasters. The OpenFEMA program provides programmatic access to disaster declarations, public assistance, individual assistance, hazard mitigation, and National Flood Insurance Program (NFIP) data.
+
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Federal Government, Disasters, Emergencies
+- Disasters
+- Emergencies
+- Federal Government
+- Flood Insurance
+- Hazard Mitigation
 
 ## Timestamps
 
-- **Created:** 2024-12-03 
-- **Modified:** 2024-12-30 
+- **Created:** 2024-12-03
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Federal Emergency Management Agency
+### OpenFEMA API
 
-Emergency Management. National Preparedness; Training & Education;
-National Incident Management System (NIMS) ... Emergency Manager Exchange;
-Federal Agency Mission Assignments; Social Scientist Partnership; ... An
-API specification defines how an API functions and the results to expect
-when using the API. Usually, API specifications are ...
+The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation grants, and the National Flood Insurance Program.
 
-**Human URL:** [https://www.fema.gov/about/openfema/api](https://www.fema.gov/about/openfema/api)
+- **Human URL:** https://www.fema.gov/about/openfema/api
+- **Base URL:** https://www.fema.gov/api/open
 
+#### Tags
 
-#### Tags:
-
- - API
+- Disasters
+- Emergencies
+- Flood Insurance
+- Hazard Mitigation
 
 #### Properties
 
+- [Documentation](https://www.fema.gov/about/openfema/api)
+- [OpenAPI](openapi/openfema.yml)
+- [Rules](rules/openfema-rules.yml)
+
+## Common Properties
+
+- [Website](https://www.fema.gov/)
 - [Documentation](https://www.fema.gov/about/openfema/api)
 
 ## Maintainers
 
 **FN:** Kin Lane
 
-**Email:** info@apievangelist.com
-
+**Email:** kin@apievangelist.com

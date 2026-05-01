@@ -1,0 +1,21 @@
+{
+  "femaDeclarationString": "DR-4673-FL",
+  "disasterNumber": 4673,
+  "state": "FL",
+  "declarationType": "DR",
+  "declarationDate": "2022-09-29T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "declarationTitle": "HURRICANE IAN",
+  "ihProgramDeclared": 1,
+  "iaProgramDeclared": 1,
+  "paProgramDeclared": 1,
+  "hmProgramDeclared": 1,
+  "incidentBeginDate": "2022-09-23T00:00:00.000Z",
+  "incidentEndDate": "2022-11-04T00:00:00.000Z",
+  "fipsStateCode": "12",
+  "fipsCountyCode": "000",
+  "designatedArea": "Statewide",
+  "region": 4,
+  "id": "00000000-0000-0000-0000-000000000000",
+  "lastRefresh": "2024-01-01T00:00:00.000Z"
+}
