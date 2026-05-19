@@ -1,0 +1,131 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: OpenFEMA API — NFIP
+  description: 'OpenFEMA API — NFIP. 3 operations. Lead operation: List NFIP community status book entries. Self-contained
+    Naftiko capability covering one Federal Emergency Management Agency business surface.'
+  tags:
+  - Federal Emergency Management Agency
+  - NFIP
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    FEDERAL_EMERGENCY_MANAGEMENT_AGENCY_API_KEY: FEDERAL_EMERGENCY_MANAGEMENT_AGENCY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openfema-nfip
+    baseUri: https://www.fema.gov/api/open
+    description: OpenFEMA API — NFIP business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-NfipCommunityStatusBook
+      path: /v1/NfipCommunityStatusBook
+      operations:
+      - name: listnfipcommunitystatusbook
+        method: GET
+        description: List NFIP community status book entries
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v2-FimaNfipClaims
+      path: /v2/FimaNfipClaims
+      operations:
+      - name: listfimanfipclaims
+        method: GET
+        description: List NFIP claims
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v2-FimaNfipPolicies
+      path: /v2/FimaNfipPolicies
+      operations:
+      - name: listfimanfippolicies
+        method: GET
+        description: List NFIP policies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: openfema-nfip-rest
+    port: 8080
+    description: REST adapter for OpenFEMA API — NFIP. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/v1/nfipcommunitystatusbook
+      name: v1-nfipcommunitystatusbook
+      description: REST surface for v1-NfipCommunityStatusBook.
+      operations:
+      - method: GET
+        name: listnfipcommunitystatusbook
+        description: List NFIP community status book entries
+        call: openfema-nfip.listnfipcommunitystatusbook
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v2/fimanfipclaims
+      name: v2-fimanfipclaims
+      description: REST surface for v2-FimaNfipClaims.
+      operations:
+      - method: GET
+        name: listfimanfipclaims
+        description: List NFIP claims
+        call: openfema-nfip.listfimanfipclaims
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v2/fimanfippolicies
+      name: v2-fimanfippolicies
+      description: REST surface for v2-FimaNfipPolicies.
+      operations:
+      - method: GET
+        name: listfimanfippolicies
+        description: List NFIP policies
+        call: openfema-nfip.listfimanfippolicies
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openfema-nfip-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for OpenFEMA API — NFIP. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: list-nfip-community-status-book
+      description: List NFIP community status book entries
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openfema-nfip.listnfipcommunitystatusbook
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-nfip-claims
+      description: List NFIP claims
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openfema-nfip.listfimanfipclaims
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-nfip-policies
+      description: List NFIP policies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openfema-nfip.listfimanfippolicies
+      outputParameters:
+      - type: object
+        mapping: $.
