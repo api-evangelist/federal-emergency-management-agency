@@ -1,0 +1,1087 @@
+{
+  "item": [
+    {
+      "id": "624c6fb3-dd4c-4bca-9e9e-4a1fd39c8dbc",
+      "name": "Disasters",
+      "description": {
+        "content": "Disaster declarations and summaries",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a67bec44-34ea-4259-8e54-57bd47bf03fe",
+          "name": "List disaster declarations summaries",
+          "request": {
+            "name": "List disaster declarations summaries",
+            "description": {
+              "content": "Returns a summarized dataset describing all federally declared disasters from 1953 to the present.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "DisasterDeclarationsSummaries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                },
+                {
+                  "disabled": false,
+                  "key": "$select",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "$orderby",
+                  "value": "<string>",
+                  "description": "Field name and optional direction (asc/desc) to order results by."
+                },
+                {
+                  "disabled": false,
+                  "key": "$format",
+                  "value": "json",
+                  "description": "Response format (json or csv)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "97199cc5-3e28-48e5-862d-528dd7b81ac0",
+              "name": "Disaster declarations response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "DisasterDeclarationsSummaries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$select",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$orderby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$format",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"metadata\": {\n    \"skip\": 6264,\n    \"top\": 2149,\n    \"count\": 9084,\n    \"filter\": \"string\",\n    \"format\": \"string\",\n    \"orderby\": \"string\",\n    \"select\": \"string\",\n    \"entityname\": \"string\",\n    \"version\": \"string\",\n    \"url\": \"string\",\n    \"rundate\": \"2017-08-25T04:21:51.694Z\"\n  },\n  \"DisasterDeclarationsSummaries\": [\n    {\n      \"femaDeclarationString\": \"string\",\n      \"disasterNumber\": 9817,\n      \"state\": \"string\",\n      \"declarationType\": \"DR\",\n      \"declarationDate\": \"1964-03-02T23:28:37.968Z\",\n      \"incidentType\": \"string\",\n      \"declarationTitle\": \"string\",\n      \"ihProgramDeclared\": 2458,\n      \"iaProgramDeclared\": 5820,\n      \"paProgramDeclared\": 6844,\n      \"hmProgramDeclared\": 5893,\n      \"incidentBeginDate\": \"2010-07-24T15:13:40.525Z\",\n      \"incidentEndDate\": \"1960-12-14T18:27:51.684Z\",\n      \"disasterCloseoutDate\": \"1954-07-30T18:46:56.574Z\",\n      \"fipsStateCode\": \"string\",\n      \"fipsCountyCode\": \"string\",\n      \"designatedArea\": \"string\",\n      \"region\": 2531,\n      \"id\": \"string\",\n      \"hash\": \"string\",\n      \"lastRefresh\": \"2011-10-09T17:06:14.750Z\"\n    },\n    {\n      \"femaDeclarationString\": \"string\",\n      \"disasterNumber\": 4281,\n      \"state\": \"string\",\n      \"declarationType\": \"FM\",\n      \"declarationDate\": \"2000-01-11T17:44:55.477Z\",\n      \"incidentType\": \"string\",\n      \"declarationTitle\": \"string\",\n      \"ihProgramDeclared\": 9094,\n      \"iaProgramDeclared\": 1824,\n      \"paProgramDeclared\": 4218,\n      \"hmProgramDeclared\": 6200,\n      \"incidentBeginDate\": \"1947-12-21T04:05:24.513Z\",\n      \"incidentEndDate\": \"1954-10-15T04:12:24.245Z\",\n      \"disasterCloseoutDate\": \"1991-01-26T13:11:32.232Z\",\n      \"fipsStateCode\": \"string\",\n      \"fipsCountyCode\": \"string\",\n      \"designatedArea\": \"string\",\n      \"region\": 2268,\n      \"id\": \"string\",\n      \"hash\": \"string\",\n      \"lastRefresh\": \"2013-01-23T01:54:46.315Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f61a8b2-d376-44db-9de2-b6d31cbd471a",
+          "name": "List FEMA web disaster declarations",
+          "request": {
+            "name": "List FEMA web disaster declarations",
+            "description": {
+              "content": "Returns FEMA declaration types, authorized assistance, and geospatial information with one record per disaster.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "FemaWebDisasterDeclarations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cf1b8645-ebab-437e-944b-e350d405ca95",
+              "name": "FEMA web disaster declarations response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "FemaWebDisasterDeclarations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1640b941-d807-4ffa-8e65-c04fea7c8041",
+          "name": "List declaration denials",
+          "request": {
+            "name": "List declaration denials",
+            "description": {
+              "content": "Requests for major disaster and emergency declarations that were denied by FEMA.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "DeclarationDenials"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2fa37ad4-7cf5-4a6d-b936-f45481a4e1f8",
+              "name": "Declaration denials response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "DeclarationDenials"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c1ec9e65-9a3d-43f9-90cd-391659e955b4",
+      "name": "Assistance",
+      "description": {
+        "content": "Public, individual, and hazard mitigation assistance",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "604bbc12-1c11-485a-a634-b08aae1bccf0",
+          "name": "List public assistance funded project details",
+          "request": {
+            "name": "List public assistance funded project details",
+            "description": {
+              "content": "Obligated Public Assistance projects and individual funded project worksheets.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "PublicAssistanceFundedProjectsDetails"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "154b6f10-aeb8-42eb-8c60-6b4ba13af206",
+              "name": "Public assistance funded projects response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "PublicAssistanceFundedProjectsDetails"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8186a62b-fb44-4a1a-9ec6-525dd3115331",
+          "name": "List individual assistance housing registrants for large disasters",
+          "request": {
+            "name": "List individual assistance housing registrants for large disasters",
+            "description": {
+              "content": "Non-PII data on Individual and Households Program assistance for major disaster declarations.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "IndividualAssistanceHousingRegistrantsLargeDisasters"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "77a18f67-70f8-4649-bfe2-1f459cb9ddf1",
+              "name": "Individual assistance registrants response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "IndividualAssistanceHousingRegistrantsLargeDisasters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9c820e19-028e-4c04-a2fe-db9a6cfb097f",
+          "name": "List hazard mitigation grant program disaster summaries",
+          "request": {
+            "name": "List hazard mitigation grant program disaster summaries",
+            "description": {
+              "content": "Disaster-level financial details for FEMA's mitigation grant programs.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "HazardMitigationGrantProgramDisasterSummaries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3680f3c4-9ee2-4f7d-9ec4-670675e67c3c",
+              "name": "Hazard mitigation grant program disaster summaries response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "HazardMitigationGrantProgramDisasterSummaries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "4749548b-6811-4334-b847-cdbc714a05ff",
+      "name": "NFIP",
+      "description": {
+        "content": "National Flood Insurance Program data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "33513e82-fd01-4d94-97d4-949365c38708",
+          "name": "List NFIP policies",
+          "request": {
+            "name": "List NFIP policies",
+            "description": {
+              "content": "Details on NFIP policy transactions derived from the program's system of record.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "FimaNfipPolicies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5c1af542-69ce-4acb-ba99-c9300d9cc53f",
+              "name": "NFIP policies response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "FimaNfipPolicies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "278addd1-03ff-4b0f-b6ff-1b4d923207dc",
+          "name": "List NFIP claims",
+          "request": {
+            "name": "List NFIP claims",
+            "description": {
+              "content": "Details on NFIP claims transactions from the program's reporting platform.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "FimaNfipClaims"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0461f91e-f3eb-47ad-96bd-484d2dbdb831",
+              "name": "NFIP claims response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "FimaNfipClaims"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ac323e3-7590-45e8-aed3-39968b5c6d46",
+          "name": "List NFIP community status book entries",
+          "request": {
+            "name": "List NFIP community status book entries",
+            "description": {
+              "content": "Current NFIP community status determining flood insurance availability and CRS discount rates.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "NfipCommunityStatusBook"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aadc4b00-b538-4ce9-8a98-9cf5de37e46d",
+              "name": "NFIP community status book response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "NfipCommunityStatusBook"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e9e25bec-78aa-4cf1-aa24-4a5132d096e1",
+      "name": "Metadata",
+      "description": {
+        "content": "API and dataset metadata",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "731630fd-220f-440e-a777-218f139822ed",
+          "name": "List OpenFEMA datasets",
+          "request": {
+            "name": "List OpenFEMA datasets",
+            "description": {
+              "content": "Metadata for OpenFEMA datasets including descriptions, update frequency, and version details.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "OpenFemaDataSets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fdebd51d-0b25-4914-891d-d39829268260",
+              "name": "OpenFEMA datasets response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "OpenFemaDataSets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a6160384-5196-44b7-a620-c90cccf96693",
+          "name": "List FEMA regions",
+          "request": {
+            "name": "List FEMA regions",
+            "description": {
+              "content": "List of FEMA regions with headquarters locations and geospatial identifiers.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "FemaRegions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f6337cd0-c119-4c56-8a87-7628f75a8dbd",
+              "name": "FEMA regions response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "FemaRegions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.fema.gov/api/open",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b801b2f7-0429-47d7-8d1b-a212d6964cf3",
+    "name": "OpenFEMA API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation, and the National Flood Insurance Program (NFIP).\n\nContact Support:\n Name: OpenFEMA",
+      "type": "text/plain"
+    }
+  }
+}

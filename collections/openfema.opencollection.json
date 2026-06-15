@@ -1,0 +1,381 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenFEMA API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Disasters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List disaster declarations summaries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              },
+              {
+                "name": "$select",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to return."
+              },
+              {
+                "name": "$orderby",
+                "value": "",
+                "type": "query",
+                "description": "Field name and optional direction (asc/desc) to order results by."
+              },
+              {
+                "name": "$format",
+                "value": "",
+                "type": "query",
+                "description": "Response format (json or csv)."
+              }
+            ]
+          },
+          "docs": "Returns a summarized dataset describing all federally declared disasters from 1953 to the present."
+        },
+        {
+          "info": {
+            "name": "List FEMA web disaster declarations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Returns FEMA declaration types, authorized assistance, and geospatial information with one record per disaster."
+        },
+        {
+          "info": {
+            "name": "List declaration denials",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/DeclarationDenials",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Requests for major disaster and emergency declarations that were denied by FEMA."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Assistance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List public assistance funded project details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsDetails",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Obligated Public Assistance projects and individual funded project worksheets."
+        },
+        {
+          "info": {
+            "name": "List individual assistance housing registrants for large disasters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/IndividualAssistanceHousingRegistrantsLargeDisasters",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Non-PII data on Individual and Households Program assistance for major disaster declarations."
+        },
+        {
+          "info": {
+            "name": "List hazard mitigation grant program disaster summaries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Disaster-level financial details for FEMA's mitigation grant programs."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "NFIP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List NFIP policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/FimaNfipPolicies",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Details on NFIP policy transactions derived from the program's system of record."
+        },
+        {
+          "info": {
+            "name": "List NFIP claims",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/FimaNfipClaims",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Details on NFIP claims transactions from the program's reporting platform."
+        },
+        {
+          "info": {
+            "name": "List NFIP community status book entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Current NFIP community status determining flood insurance availability and CRS discount rates."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List OpenFEMA datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/OpenFemaDataSets",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Metadata for OpenFEMA datasets including descriptions, update frequency, and version details."
+        },
+        {
+          "info": {
+            "name": "List FEMA regions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/FemaRegions"
+          },
+          "docs": "List of FEMA regions with headquarters locations and geospatial identifiers."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
