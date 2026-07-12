@@ -42,6 +42,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/rules/openfema-rules.yml
 common:
+  - type: DomainSecurity
+    url: security/federal-emergency-management-agency-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/FEMA
   - type: LinkedIn
