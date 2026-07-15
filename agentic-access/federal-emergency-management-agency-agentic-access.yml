@@ -1,0 +1,124 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/openfema.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 11
+  by_action_class:
+    connected: 11
+  by_consequence:
+    read: 11
+  human_in_the_loop_required: 0
+operations:
+- path: /v2/DisasterDeclarationsSummaries
+  method: get
+  operationId: listDisasterDeclarationsSummaries
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/FemaWebDisasterDeclarations
+  method: get
+  operationId: listFemaWebDisasterDeclarations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/DeclarationDenials
+  method: get
+  operationId: listDeclarationDenials
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/PublicAssistanceFundedProjectsDetails
+  method: get
+  operationId: listPublicAssistanceFundedProjectsDetails
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/IndividualAssistanceHousingRegistrantsLargeDisasters
+  method: get
+  operationId: listIndividualAssistanceHousingRegistrants
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/HazardMitigationGrantProgramDisasterSummaries
+  method: get
+  operationId: listHazardMitigationGrantProgramDisasterSummaries
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/FimaNfipPolicies
+  method: get
+  operationId: listFimaNfipPolicies
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/FimaNfipClaims
+  method: get
+  operationId: listFimaNfipClaims
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/NfipCommunityStatusBook
+  method: get
+  operationId: listNfipCommunityStatusBook
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/OpenFemaDataSets
+  method: get
+  operationId: listOpenFemaDataSets
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/FemaRegions
+  method: get
+  operationId: listFemaRegions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
