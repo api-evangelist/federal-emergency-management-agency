@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: OpenFEMA Assistance API
+  description: The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation, and the National Flood Insurance Program (NFIP).
+  version: '2.0'
+  contact:
+    name: OpenFEMA
+    url: https://www.fema.gov/about/openfema/api
+servers:
+- url: https://www.fema.gov/api/open
+  description: OpenFEMA production endpoint
+tags:
+- name: Assistance
+  description: Public, individual, and hazard mitigation assistance
+paths:
+  /v1/PublicAssistanceFundedProjectsDetails:
+    get:
+      operationId: listPublicAssistanceFundedProjectsDetails
+      summary: List public assistance funded project details
+      description: Obligated Public Assistance projects and individual funded project worksheets.
+      tags:
+      - Assistance
+      parameters:
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: Public assistance funded projects response
+  /v1/IndividualAssistanceHousingRegistrantsLargeDisasters:
+    get:
+      operationId: listIndividualAssistanceHousingRegistrants
+      summary: List individual assistance housing registrants for large disasters
+      description: Non-PII data on Individual and Households Program assistance for major disaster declarations.
+      tags:
+      - Assistance
+      parameters:
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: Individual assistance registrants response
+  /v2/HazardMitigationGrantProgramDisasterSummaries:
+    get:
+      operationId: listHazardMitigationGrantProgramDisasterSummaries
+      summary: List hazard mitigation grant program disaster summaries
+      description: Disaster-level financial details for FEMA's mitigation grant programs.
+      tags:
+      - Assistance
+      parameters:
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: Hazard mitigation grant program disaster summaries response
+components:
+  parameters:
+    Skip:
+      name: $skip
+      in: query
+      description: Number of records to skip for pagination.
+      schema:
+        type: integer
+        default: 0
+    Filter:
+      name: $filter
+      in: query
+      description: OData-style filter expression.
+      schema:
+        type: string
+    Top:
+      name: $top
+      in: query
+      description: Maximum number of records to return (max 1000).
+      schema:
+        type: integer
+        default: 1000

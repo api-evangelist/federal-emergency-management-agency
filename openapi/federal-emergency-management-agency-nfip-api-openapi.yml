@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: OpenFEMA Assistance NFIP API
+  description: The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation, and the National Flood Insurance Program (NFIP).
+  version: '2.0'
+  contact:
+    name: OpenFEMA
+    url: https://www.fema.gov/about/openfema/api
+servers:
+- url: https://www.fema.gov/api/open
+  description: OpenFEMA production endpoint
+tags:
+- name: NFIP
+  description: National Flood Insurance Program data
+paths:
+  /v2/FimaNfipPolicies:
+    get:
+      operationId: listFimaNfipPolicies
+      summary: List NFIP policies
+      description: Details on NFIP policy transactions derived from the program's system of record.
+      tags:
+      - NFIP
+      parameters:
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: NFIP policies response
+  /v2/FimaNfipClaims:
+    get:
+      operationId: listFimaNfipClaims
+      summary: List NFIP claims
+      description: Details on NFIP claims transactions from the program's reporting platform.
+      tags:
+      - NFIP
+      parameters:
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: NFIP claims response
+  /v1/NfipCommunityStatusBook:
+    get:
+      operationId: listNfipCommunityStatusBook
+      summary: List NFIP community status book entries
+      description: Current NFIP community status determining flood insurance availability and CRS discount rates.
+      tags:
+      - NFIP
+      parameters:
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: NFIP community status book response
+components:
+  parameters:
+    Skip:
+      name: $skip
+      in: query
+      description: Number of records to skip for pagination.
+      schema:
+        type: integer
+        default: 0
+    Filter:
+      name: $filter
+      in: query
+      description: OData-style filter expression.
+      schema:
+        type: string
+    Top:
+      name: $top
+      in: query
+      description: Maximum number of records to return (max 1000).
+      schema:
+        type: integer
+        default: 1000

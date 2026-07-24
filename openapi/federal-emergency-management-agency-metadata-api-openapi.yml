@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: OpenFEMA Assistance Metadata API
+  description: The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation, and the National Flood Insurance Program (NFIP).
+  version: '2.0'
+  contact:
+    name: OpenFEMA
+    url: https://www.fema.gov/about/openfema/api
+servers:
+- url: https://www.fema.gov/api/open
+  description: OpenFEMA production endpoint
+tags:
+- name: Metadata
+  description: API and dataset metadata
+paths:
+  /v1/OpenFemaDataSets:
+    get:
+      operationId: listOpenFemaDataSets
+      summary: List OpenFEMA datasets
+      description: Metadata for OpenFEMA datasets including descriptions, update frequency, and version details.
+      tags:
+      - Metadata
+      parameters:
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: OpenFEMA datasets response
+  /v2/FemaRegions:
+    get:
+      operationId: listFemaRegions
+      summary: List FEMA regions
+      description: List of FEMA regions with headquarters locations and geospatial identifiers.
+      tags:
+      - Metadata
+      responses:
+        '200':
+          description: FEMA regions response
+components:
+  parameters:
+    Skip:
+      name: $skip
+      in: query
+      description: Number of records to skip for pagination.
+      schema:
+        type: integer
+        default: 0
+    Filter:
+      name: $filter
+      in: query
+      description: OData-style filter expression.
+      schema:
+        type: string
+    Top:
+      name: $top
+      in: query
+      description: Maximum number of records to return (max 1000).
+      schema:
+        type: integer
+        default: 1000
