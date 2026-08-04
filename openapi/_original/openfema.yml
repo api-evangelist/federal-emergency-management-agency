@@ -1,0 +1,312 @@
+openapi: 3.0.3
+info:
+  title: OpenFEMA API
+  description: >-
+    The OpenFEMA API provides programmatic access to FEMA's public datasets
+    including disaster declarations, public assistance, individual assistance,
+    hazard mitigation, and the National Flood Insurance Program (NFIP).
+  version: '2.0'
+  contact:
+    name: OpenFEMA
+    url: https://www.fema.gov/about/openfema/api
+servers:
+  - url: https://www.fema.gov/api/open
+    description: OpenFEMA production endpoint
+tags:
+  - name: Disasters
+    description: Disaster declarations and summaries
+  - name: Assistance
+    description: Public, individual, and hazard mitigation assistance
+  - name: NFIP
+    description: National Flood Insurance Program data
+  - name: Metadata
+    description: API and dataset metadata
+paths:
+  /v2/DisasterDeclarationsSummaries:
+    get:
+      operationId: listDisasterDeclarationsSummaries
+      summary: List disaster declarations summaries
+      description: >-
+        Returns a summarized dataset describing all federally declared
+        disasters from 1953 to the present.
+      tags:
+        - Disasters
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+        - $ref: '#/components/parameters/Select'
+        - $ref: '#/components/parameters/OrderBy'
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          description: Disaster declarations response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  metadata:
+                    $ref: '#/components/schemas/Metadata'
+                  DisasterDeclarationsSummaries:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DisasterDeclarationSummary'
+  /v1/FemaWebDisasterDeclarations:
+    get:
+      operationId: listFemaWebDisasterDeclarations
+      summary: List FEMA web disaster declarations
+      description: >-
+        Returns FEMA declaration types, authorized assistance, and geospatial
+        information with one record per disaster.
+      tags:
+        - Disasters
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: FEMA web disaster declarations response
+  /v1/DeclarationDenials:
+    get:
+      operationId: listDeclarationDenials
+      summary: List declaration denials
+      description: Requests for major disaster and emergency declarations that were denied by FEMA.
+      tags:
+        - Disasters
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: Declaration denials response
+  /v1/PublicAssistanceFundedProjectsDetails:
+    get:
+      operationId: listPublicAssistanceFundedProjectsDetails
+      summary: List public assistance funded project details
+      description: Obligated Public Assistance projects and individual funded project worksheets.
+      tags:
+        - Assistance
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: Public assistance funded projects response
+  /v1/IndividualAssistanceHousingRegistrantsLargeDisasters:
+    get:
+      operationId: listIndividualAssistanceHousingRegistrants
+      summary: List individual assistance housing registrants for large disasters
+      description: Non-PII data on Individual and Households Program assistance for major disaster declarations.
+      tags:
+        - Assistance
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: Individual assistance registrants response
+  /v2/HazardMitigationGrantProgramDisasterSummaries:
+    get:
+      operationId: listHazardMitigationGrantProgramDisasterSummaries
+      summary: List hazard mitigation grant program disaster summaries
+      description: Disaster-level financial details for FEMA's mitigation grant programs.
+      tags:
+        - Assistance
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: Hazard mitigation grant program disaster summaries response
+  /v2/FimaNfipPolicies:
+    get:
+      operationId: listFimaNfipPolicies
+      summary: List NFIP policies
+      description: Details on NFIP policy transactions derived from the program's system of record.
+      tags:
+        - NFIP
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: NFIP policies response
+  /v2/FimaNfipClaims:
+    get:
+      operationId: listFimaNfipClaims
+      summary: List NFIP claims
+      description: Details on NFIP claims transactions from the program's reporting platform.
+      tags:
+        - NFIP
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: NFIP claims response
+  /v1/NfipCommunityStatusBook:
+    get:
+      operationId: listNfipCommunityStatusBook
+      summary: List NFIP community status book entries
+      description: Current NFIP community status determining flood insurance availability and CRS discount rates.
+      tags:
+        - NFIP
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: NFIP community status book response
+  /v1/OpenFemaDataSets:
+    get:
+      operationId: listOpenFemaDataSets
+      summary: List OpenFEMA datasets
+      description: Metadata for OpenFEMA datasets including descriptions, update frequency, and version details.
+      tags:
+        - Metadata
+      parameters:
+        - $ref: '#/components/parameters/Top'
+        - $ref: '#/components/parameters/Skip'
+        - $ref: '#/components/parameters/Filter'
+      responses:
+        '200':
+          description: OpenFEMA datasets response
+  /v2/FemaRegions:
+    get:
+      operationId: listFemaRegions
+      summary: List FEMA regions
+      description: List of FEMA regions with headquarters locations and geospatial identifiers.
+      tags:
+        - Metadata
+      responses:
+        '200':
+          description: FEMA regions response
+components:
+  parameters:
+    Top:
+      name: $top
+      in: query
+      description: Maximum number of records to return (max 1000).
+      schema:
+        type: integer
+        default: 1000
+    Skip:
+      name: $skip
+      in: query
+      description: Number of records to skip for pagination.
+      schema:
+        type: integer
+        default: 0
+    Filter:
+      name: $filter
+      in: query
+      description: OData-style filter expression.
+      schema:
+        type: string
+    Select:
+      name: $select
+      in: query
+      description: Comma-separated list of fields to return.
+      schema:
+        type: string
+    OrderBy:
+      name: $orderby
+      in: query
+      description: Field name and optional direction (asc/desc) to order results by.
+      schema:
+        type: string
+    Format:
+      name: $format
+      in: query
+      description: Response format (json or csv).
+      schema:
+        type: string
+        enum: [json, csv]
+        default: json
+  schemas:
+    Metadata:
+      type: object
+      properties:
+        skip:
+          type: integer
+        top:
+          type: integer
+        count:
+          type: integer
+        filter:
+          type: string
+        format:
+          type: string
+        orderby:
+          type: string
+        select:
+          type: string
+        entityname:
+          type: string
+        version:
+          type: string
+        url:
+          type: string
+        rundate:
+          type: string
+          format: date-time
+    DisasterDeclarationSummary:
+      type: object
+      properties:
+        femaDeclarationString:
+          type: string
+        disasterNumber:
+          type: integer
+        state:
+          type: string
+        declarationType:
+          type: string
+          enum: [DR, EM, FM]
+        declarationDate:
+          type: string
+          format: date-time
+        incidentType:
+          type: string
+        declarationTitle:
+          type: string
+        ihProgramDeclared:
+          type: integer
+        iaProgramDeclared:
+          type: integer
+        paProgramDeclared:
+          type: integer
+        hmProgramDeclared:
+          type: integer
+        incidentBeginDate:
+          type: string
+          format: date-time
+        incidentEndDate:
+          type: string
+          format: date-time
+        disasterCloseoutDate:
+          type: string
+          format: date-time
+        fipsStateCode:
+          type: string
+        fipsCountyCode:
+          type: string
+        designatedArea:
+          type: string
+        region:
+          type: integer
+        id:
+          type: string
+        hash:
+          type: string
+        lastRefresh:
+          type: string
+          format: date-time

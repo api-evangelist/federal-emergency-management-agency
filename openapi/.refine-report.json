@@ -1,0 +1,20 @@
+{
+  "provider": "federal-emergency-management-agency",
+  "sources": [
+    "federal-emergency-management-agency-assistance-api-openapi.yml",
+    "federal-emergency-management-agency-disasters-api-openapi.yml",
+    "federal-emergency-management-agency-metadata-api-openapi.yml",
+    "federal-emergency-management-agency-nfip-api-openapi.yml"
+  ],
+  "outputs": [
+    "federal-emergency-management-agency-assistance-api-openapi.yml",
+    "federal-emergency-management-agency-disasters-api-openapi.yml",
+    "federal-emergency-management-agency-metadata-api-openapi.yml",
+    "federal-emergency-management-agency-nfip-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
