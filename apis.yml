@@ -30,7 +30,7 @@ tags:
   - Flood Insurance
   - Hazard Mitigation
 url: https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: federal-emergency-management-agency:federal-emergency-management-agency-assistance-api
   name: Federal Emergency Management Agency Assistance API
