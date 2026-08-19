@@ -1,0 +1,308 @@
+{
+  "item": [
+    {
+      "id": "1f0325da-cee7-4ead-8ac4-acf99ea7a0f9",
+      "name": "NFIP",
+      "description": {
+        "content": "National Flood Insurance Program data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "93648365-1d28-4ec4-9ea4-61fcce524204",
+          "name": "List NFIP policies",
+          "request": {
+            "name": "List NFIP policies",
+            "description": {
+              "content": "Details on NFIP policy transactions derived from the program's system of record.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "FimaNfipPolicies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4b1c1947-eb3a-40f8-b193-0532bce906ab",
+              "name": "NFIP policies response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "FimaNfipPolicies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d5d8bcfe-9272-46de-9b76-4a47b8e90276",
+          "name": "List NFIP claims",
+          "request": {
+            "name": "List NFIP claims",
+            "description": {
+              "content": "Details on NFIP claims transactions from the program's reporting platform.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "FimaNfipClaims"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9dfe9dff-583d-48c6-b9df-1faa452cc1ce",
+              "name": "NFIP claims response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "FimaNfipClaims"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "07b7d892-5b85-4709-b7e0-4320ac5c0e07",
+          "name": "List NFIP community status book entries",
+          "request": {
+            "name": "List NFIP community status book entries",
+            "description": {
+              "content": "Current NFIP community status determining flood insurance availability and CRS discount rates.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "NfipCommunityStatusBook"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "1000",
+                  "description": "Maximum number of records to return (max 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of records to skip for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData-style filter expression."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2dfcada9-8c1b-414a-a704-7b4637c523a2",
+              "name": "NFIP community status book response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "NfipCommunityStatusBook"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$top",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.fema.gov/api/open",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "21aabd7d-c6ad-4845-85fe-87b33a167d34",
+    "name": "OpenFEMA Assistance NFIP API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation, and the National Flood Insurance Program (NFIP).\n\nContact Support:\n Name: OpenFEMA",
+      "type": "text/plain"
+    }
+  }
+}

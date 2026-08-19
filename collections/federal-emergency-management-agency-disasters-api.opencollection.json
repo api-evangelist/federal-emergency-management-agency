@@ -1,0 +1,129 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenFEMA Assistance Disasters API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Disasters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List disaster declarations summaries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              },
+              {
+                "name": "$select",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to return."
+              },
+              {
+                "name": "$orderby",
+                "value": "",
+                "type": "query",
+                "description": "Field name and optional direction (asc/desc) to order results by."
+              },
+              {
+                "name": "$format",
+                "value": "",
+                "type": "query",
+                "description": "Response format (json or csv)."
+              }
+            ]
+          },
+          "docs": "Returns a summarized dataset describing all federally declared disasters from 1953 to the present."
+        },
+        {
+          "info": {
+            "name": "List FEMA web disaster declarations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Returns FEMA declaration types, authorized assistance, and geospatial information with one record per disaster."
+        },
+        {
+          "info": {
+            "name": "List declaration denials",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/DeclarationDenials",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Requests for major disaster and emergency declarations that were denied by FEMA."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

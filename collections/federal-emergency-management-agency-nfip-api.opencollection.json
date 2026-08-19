@@ -1,0 +1,111 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenFEMA Assistance NFIP API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "NFIP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List NFIP policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/FimaNfipPolicies",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Details on NFIP policy transactions derived from the program's system of record."
+        },
+        {
+          "info": {
+            "name": "List NFIP claims",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/FimaNfipClaims",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Details on NFIP claims transactions from the program's reporting platform."
+        },
+        {
+          "info": {
+            "name": "List NFIP community status book entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Current NFIP community status determining flood insurance availability and CRS discount rates."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

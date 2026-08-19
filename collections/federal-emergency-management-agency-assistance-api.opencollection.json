@@ -1,0 +1,111 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenFEMA Assistance API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assistance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List public assistance funded project details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsDetails",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Obligated Public Assistance projects and individual funded project worksheets."
+        },
+        {
+          "info": {
+            "name": "List individual assistance housing registrants for large disasters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/IndividualAssistanceHousingRegistrantsLargeDisasters",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Non-PII data on Individual and Households Program assistance for major disaster declarations."
+        },
+        {
+          "info": {
+            "name": "List hazard mitigation grant program disaster summaries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Disaster-level financial details for FEMA's mitigation grant programs."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenFEMA Assistance Metadata API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List OpenFEMA datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v1/OpenFemaDataSets",
+            "params": [
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (max 1000)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Number of records to skip for pagination."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData-style filter expression."
+              }
+            ]
+          },
+          "docs": "Metadata for OpenFEMA datasets including descriptions, update frequency, and version details."
+        },
+        {
+          "info": {
+            "name": "List FEMA regions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.fema.gov/api/open/v2/FemaRegions"
+          },
+          "docs": "List of FEMA regions with headquarters locations and geospatial identifiers."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
