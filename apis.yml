@@ -110,6 +110,9 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/rules/openfema-rules.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/federal-emergency-management-agency-capability-edges.yml
+    name: Federal Emergency Management Agency Business Capability Map
   - type: AgenticAccess
     url: agentic-access/federal-emergency-management-agency-agentic-access.yml
   - type: DomainSecurity

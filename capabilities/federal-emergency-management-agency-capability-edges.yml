@@ -1,0 +1,39 @@
+slug: federal-emergency-management-agency
+provider: Federal Emergency Management Agency
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Public Sector & Government
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Assistance
+  spec_file: federal-emergency-management-agency-assistance-api-openapi.yml
+  capability_id: BC-3310.50
+  capability_id_l1: BC-3310
+  capability_name: Disaster Response and Recovery
+  confidence: 0.85
+  evidence: '''List public assistance funded project details'', ''List individual assistance housing registrants
+    for large disasters'', ''List hazard mitigation grant program disaster summaries'''
+  reason: Operations cover FEMA public assistance, individual assistance and hazard mitigation grant data,
+    matching BC-3310.50 'disaster declaration, response operations, individual and public assistance,
+    and long-term recovery coordination'. Some overlap with government grants administration keeps this
+    below 0.95.
+- tag: Disasters
+  spec_file: federal-emergency-management-agency-disasters-api-openapi.yml
+  capability_id: BC-3310.50
+  capability_id_l1: BC-3310
+  capability_name: Disaster Response and Recovery
+  confidence: 0.75
+  evidence: GET /v2/DisasterDeclarationsSummaries  List disaster declarations summaries; GET /v1/DeclarationDenials  List
+    declaration denials
+  reason: Operations expose FEMA disaster declaration records and declaration denials, which is precisely
+    the disaster declaration/response-and-recovery administration described in BC-3310.50 ('Disaster declaration,
+    response operations, individual and public assistance'). Confidence held below 0.9 because the surface
+    is a read-only open-data publication of that programme rather than the declaration workflow itself.
