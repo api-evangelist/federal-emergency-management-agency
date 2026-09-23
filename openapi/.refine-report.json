@@ -1,10 +1,7 @@
 {
   "provider": "federal-emergency-management-agency",
   "sources": [
-    "federal-emergency-management-agency-assistance-api-openapi.yml",
-    "federal-emergency-management-agency-disasters-api-openapi.yml",
-    "federal-emergency-management-agency-metadata-api-openapi.yml",
-    "federal-emergency-management-agency-nfip-api-openapi.yml"
+    "_original/openfema.yml"
   ],
   "outputs": [
     "federal-emergency-management-agency-assistance-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openfema.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "federal-emergency-management-agency-assistance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-emergency-management-agency-disasters-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-emergency-management-agency-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-emergency-management-agency-nfip-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

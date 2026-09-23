@@ -1,7 +1,7 @@
-name: OpenFEMA API Rules
+x-name: OpenFEMA API Rules
 description: >-
   Operational and design rules for working with the OpenFEMA API.
-api: openfema
+x-api: openfema
 rules:
   - id: pagination-top-limit
     description: The $top parameter is capped at 1000 records per request.

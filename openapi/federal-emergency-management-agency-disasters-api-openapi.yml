@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: OpenFEMA Assistance Disasters API
+  title: OpenFEMA Disasters API
   description: The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation, and the National Flood Insurance Program (NFIP).
   version: '2.0'
   contact:
@@ -71,19 +71,25 @@ paths:
           description: Declaration denials response
 components:
   parameters:
-    Top:
-      name: $top
+    Select:
+      name: $select
       in: query
-      description: Maximum number of records to return (max 1000).
-      schema:
-        type: integer
-        default: 1000
-    OrderBy:
-      name: $orderby
-      in: query
-      description: Field name and optional direction (asc/desc) to order results by.
+      description: Comma-separated list of fields to return.
       schema:
         type: string
+    Filter:
+      name: $filter
+      in: query
+      description: OData-style filter expression.
+      schema:
+        type: string
+    Skip:
+      name: $skip
+      in: query
+      description: Number of records to skip for pagination.
+      schema:
+        type: integer
+        default: 0
     Format:
       name: $format
       in: query
@@ -94,26 +100,46 @@ components:
         - json
         - csv
         default: json
-    Skip:
-      name: $skip
+    OrderBy:
+      name: $orderby
       in: query
-      description: Number of records to skip for pagination.
+      description: Field name and optional direction (asc/desc) to order results by.
+      schema:
+        type: string
+    Top:
+      name: $top
+      in: query
+      description: Maximum number of records to return (max 1000).
       schema:
         type: integer
-        default: 0
-    Filter:
-      name: $filter
-      in: query
-      description: OData-style filter expression.
-      schema:
-        type: string
-    Select:
-      name: $select
-      in: query
-      description: Comma-separated list of fields to return.
-      schema:
-        type: string
+        default: 1000
   schemas:
+    Metadata:
+      type: object
+      properties:
+        skip:
+          type: integer
+        top:
+          type: integer
+        count:
+          type: integer
+        filter:
+          type: string
+        format:
+          type: string
+        orderby:
+          type: string
+        select:
+          type: string
+        entityname:
+          type: string
+        version:
+          type: string
+        url:
+          type: string
+        rundate:
+          type: string
+          format: date-time
     DisasterDeclarationSummary:
       type: object
       properties:
@@ -166,31 +192,5 @@ components:
         hash:
           type: string
         lastRefresh:
-          type: string
-          format: date-time
-    Metadata:
-      type: object
-      properties:
-        skip:
-          type: integer
-        top:
-          type: integer
-        count:
-          type: integer
-        filter:
-          type: string
-        format:
-          type: string
-        orderby:
-          type: string
-        select:
-          type: string
-        entityname:
-          type: string
-        version:
-          type: string
-        url:
-          type: string
-        rundate:
           type: string
           format: date-time
