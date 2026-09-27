@@ -37,7 +37,7 @@ position: Consuming
 tags:
   - Disasters
   - Emergencies
-  - Federal-Government
+  - Federal Government
   - Flood Insurance
   - Hazard Mitigation
 tags_raw:
@@ -46,6 +46,7 @@ tags_raw:
   - Federal Government
   - Flood Insurance
   - Hazard Mitigation
+  - Federal-Government
 url: https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/apis.yml
 specificationVersion: '0.23'
 apis:
