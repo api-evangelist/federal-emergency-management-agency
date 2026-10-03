@@ -39,19 +39,6 @@ paths:
           description: FEMA regions response
 components:
   parameters:
-    Skip:
-      name: $skip
-      in: query
-      description: Number of records to skip for pagination.
-      schema:
-        type: integer
-        default: 0
-    Filter:
-      name: $filter
-      in: query
-      description: OData-style filter expression.
-      schema:
-        type: string
     Top:
       name: $top
       in: query
@@ -59,3 +46,16 @@ components:
       schema:
         type: integer
         default: 1000
+    Filter:
+      name: $filter
+      in: query
+      description: OData-style filter expression.
+      schema:
+        type: string
+    Skip:
+      name: $skip
+      in: query
+      description: Number of records to skip for pagination.
+      schema:
+        type: integer
+        default: 0

@@ -70,7 +70,76 @@ paths:
         '200':
           description: Declaration denials response
 components:
+  parameters:
+    Filter:
+      name: $filter
+      in: query
+      description: OData-style filter expression.
+      schema:
+        type: string
+    Format:
+      name: $format
+      in: query
+      description: Response format (json or csv).
+      schema:
+        type: string
+        enum:
+        - json
+        - csv
+        default: json
+    Skip:
+      name: $skip
+      in: query
+      description: Number of records to skip for pagination.
+      schema:
+        type: integer
+        default: 0
+    Top:
+      name: $top
+      in: query
+      description: Maximum number of records to return (max 1000).
+      schema:
+        type: integer
+        default: 1000
+    OrderBy:
+      name: $orderby
+      in: query
+      description: Field name and optional direction (asc/desc) to order results by.
+      schema:
+        type: string
+    Select:
+      name: $select
+      in: query
+      description: Comma-separated list of fields to return.
+      schema:
+        type: string
   schemas:
+    Metadata:
+      type: object
+      properties:
+        skip:
+          type: integer
+        top:
+          type: integer
+        count:
+          type: integer
+        filter:
+          type: string
+        format:
+          type: string
+        orderby:
+          type: string
+        select:
+          type: string
+        entityname:
+          type: string
+        version:
+          type: string
+        url:
+          type: string
+        rundate:
+          type: string
+          format: date-time
     DisasterDeclarationSummary:
       type: object
       properties:
@@ -125,72 +194,3 @@ components:
         lastRefresh:
           type: string
           format: date-time
-    Metadata:
-      type: object
-      properties:
-        skip:
-          type: integer
-        top:
-          type: integer
-        count:
-          type: integer
-        filter:
-          type: string
-        format:
-          type: string
-        orderby:
-          type: string
-        select:
-          type: string
-        entityname:
-          type: string
-        version:
-          type: string
-        url:
-          type: string
-        rundate:
-          type: string
-          format: date-time
-  parameters:
-    Format:
-      name: $format
-      in: query
-      description: Response format (json or csv).
-      schema:
-        type: string
-        enum:
-        - json
-        - csv
-        default: json
-    Filter:
-      name: $filter
-      in: query
-      description: OData-style filter expression.
-      schema:
-        type: string
-    OrderBy:
-      name: $orderby
-      in: query
-      description: Field name and optional direction (asc/desc) to order results by.
-      schema:
-        type: string
-    Select:
-      name: $select
-      in: query
-      description: Comma-separated list of fields to return.
-      schema:
-        type: string
-    Skip:
-      name: $skip
-      in: query
-      description: Number of records to skip for pagination.
-      schema:
-        type: integer
-        default: 0
-    Top:
-      name: $top
-      in: query
-      description: Maximum number of records to return (max 1000).
-      schema:
-        type: integer
-        default: 1000
