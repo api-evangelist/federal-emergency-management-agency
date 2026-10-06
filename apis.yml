@@ -32,7 +32,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/federal-emergency-management-agency.png
 access: 3rd-Party
 created: '2024-12-03'
-modified: '2026-05-19'
+modified: '2026-10-06'
 position: Consuming
 tags:
   - Disasters
@@ -111,6 +111,8 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/rules/openfema-rules.yml
 common:
+  - url: https://www.fema.gov/about/news-multimedia/blog
+    type: Blog
   - type: CapabilityMap
     url: capabilities/federal-emergency-management-agency-capability-edges.yml
     name: Federal Emergency Management Agency Business Capability Map
