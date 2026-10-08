@@ -111,6 +111,12 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/rules/openfema-rules.yml
 common:
+  - type: Plans
+    url: plans/federal-emergency-management-agency-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/federal-emergency-management-agency-rate-limits.yml
+  - type: FinOps
+    url: finops/federal-emergency-management-agency-finops.yml
   - url: https://www.fema.gov/about/news-multimedia/blog
     type: Blog
   - type: CapabilityMap
