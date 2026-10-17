@@ -71,13 +71,13 @@ paths:
           description: Declaration denials response
 components:
   parameters:
-    Top:
-      name: $top
+    Skip:
+      name: $skip
       in: query
-      description: Maximum number of records to return (max 1000).
+      description: Number of records to skip for pagination.
       schema:
         type: integer
-        default: 1000
+        default: 0
     Format:
       name: $format
       in: query
@@ -88,6 +88,19 @@ components:
         - json
         - csv
         default: json
+    Top:
+      name: $top
+      in: query
+      description: Maximum number of records to return (max 1000).
+      schema:
+        type: integer
+        default: 1000
+    OrderBy:
+      name: $orderby
+      in: query
+      description: Field name and optional direction (asc/desc) to order results by.
+      schema:
+        type: string
     Select:
       name: $select
       in: query
@@ -100,20 +113,33 @@ components:
       description: OData-style filter expression.
       schema:
         type: string
-    Skip:
-      name: $skip
-      in: query
-      description: Number of records to skip for pagination.
-      schema:
-        type: integer
-        default: 0
-    OrderBy:
-      name: $orderby
-      in: query
-      description: Field name and optional direction (asc/desc) to order results by.
-      schema:
-        type: string
   schemas:
+    Metadata:
+      type: object
+      properties:
+        skip:
+          type: integer
+        top:
+          type: integer
+        count:
+          type: integer
+        filter:
+          type: string
+        format:
+          type: string
+        orderby:
+          type: string
+        select:
+          type: string
+        entityname:
+          type: string
+        version:
+          type: string
+        url:
+          type: string
+        rundate:
+          type: string
+          format: date-time
     DisasterDeclarationSummary:
       type: object
       properties:
@@ -166,31 +192,5 @@ components:
         hash:
           type: string
         lastRefresh:
-          type: string
-          format: date-time
-    Metadata:
-      type: object
-      properties:
-        skip:
-          type: integer
-        top:
-          type: integer
-        count:
-          type: integer
-        filter:
-          type: string
-        format:
-          type: string
-        orderby:
-          type: string
-        select:
-          type: string
-        entityname:
-          type: string
-        version:
-          type: string
-        url:
-          type: string
-        rundate:
           type: string
           format: date-time
