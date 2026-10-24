@@ -1,26 +1,31 @@
 {
   "provider": "federal-emergency-management-agency",
   "sources": [
-    "_original/openfema.yml"
+    "_original/federal-emergency-management-agency-openapi.json"
   ],
   "outputs": [
-    "federal-emergency-management-agency-assistance-api-openapi.yml",
-    "federal-emergency-management-agency-disasters-api-openapi.yml",
-    "federal-emergency-management-agency-metadata-api-openapi.yml",
-    "federal-emergency-management-agency-nfip-api-openapi.yml"
+    "federal-emergency-management-agency-disaster-information-api-openapi.yml",
+    "federal-emergency-management-agency-emergency-management-preparedness-alerts-api-openapi.yml",
+    "federal-emergency-management-agency-hazard-mitigation-api-openapi.yml",
+    "federal-emergency-management-agency-individual-assistance-api-openapi.yml",
+    "federal-emergency-management-agency-miscellaneous-api-openapi.yml",
+    "federal-emergency-management-agency-national-flood-insurance-program-api-openapi.yml",
+    "federal-emergency-management-agency-public-assistance-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
-    "openfema.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "federal-emergency-management-agency-openapi.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "federal-emergency-management-agency-openapi.json: declared missing tag: Disaster Information",
+    "federal-emergency-management-agency-openapi.json: declared missing tag: Emergency Management/Preparedness/Alerts",
+    "federal-emergency-management-agency-openapi.json: declared missing tag: Hazard Mitigation",
+    "federal-emergency-management-agency-openapi.json: declared missing tag: Individual Assistance",
+    "federal-emergency-management-agency-openapi.json: declared missing tag: Miscellaneous",
+    "federal-emergency-management-agency-openapi.json: declared missing tag: National Flood Insurance Program",
+    "federal-emergency-management-agency-openapi.json: declared missing tag: Public Assistance",
+    "apis.yml register: written (+7 apis, 7 total)"
   ],
-  "skipped": [
-    "federal-emergency-management-agency-assistance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "federal-emergency-management-agency-disasters-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "federal-emergency-management-agency-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "federal-emergency-management-agency-nfip-api-openapi.yml: previously refined output, superseded by openapi/_original/"
-  ]
+  "skipped": []
 }
