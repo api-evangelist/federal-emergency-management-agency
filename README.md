@@ -1,4 +1,4 @@
-# Federal Emergency Management Agency (federal-emergency-management-agency)
+# Federal Emergency Management Agency
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,59 +66,133 @@
 
 The Federal Emergency Management Agency (FEMA) coordinates the federal government's role in preparing for, preventing, mitigating, responding to, and recovering from disasters. The OpenFEMA program provides programmatic access to disaster declarations, public assistance, individual assistance, hazard mitigation, and National Flood Insurance Program (NFIP) data.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/apis.yml)
+**Areas:** Disasters · Emergencies · Federal Government · Flood Insurance · Hazard Mitigation
 
-## Scope
+## Federal Emergency Management Agency on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Federal Emergency Management Agency is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/federal-emergency-management-agency/](https://apis.io/providers/federal-emergency-management-agency/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Disasters
-- Emergencies
-- Federal Government
-- Flood Insurance
-- Hazard Mitigation
+- [Federal Emergency Management Agency Assistance API](https://apis.io/apis/federal-emergency-management-agency/federal-emergency-management-agency-assistance-api/) — Public, individual, and hazard mitigation assistance
+- [Federal Emergency Management Agency Disasters API](https://apis.io/apis/federal-emergency-management-agency/federal-emergency-management-agency-disasters-api/) — Disaster declarations and summaries
+- [Federal Emergency Management Agency Metadata API](https://apis.io/apis/federal-emergency-management-agency/federal-emergency-management-agency-metadata-api/) — API and dataset metadata
+- [Federal Emergency Management Agency NFIP API](https://apis.io/apis/federal-emergency-management-agency/federal-emergency-management-agency-nfip-api/) — National Flood Insurance Program data
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-12-03
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### OpenFEMA API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The OpenFEMA API provides programmatic access to FEMA's public datasets including disaster declarations, public assistance, individual assistance, hazard mitigation grants, and the National Flood Insurance Program.
+- [Federal Emergency Management Agency Agentic Access](https://apis.io/agentic-access/federal-emergency-management-agency/federal-emergency-management-agency-agentic-access/)
 
-- **Human URL:** [https://www.fema.gov/about/openfema/api](https://www.fema.gov/about/openfema/api)
-- **Base URL:** `https://www.fema.gov/api/open`
+#### Examples (1)
 
-#### Tags
+Example requests and responses.
 
-- Disasters
-- Emergencies
-- Flood Insurance
-- Hazard Mitigation
+- [Disaster Declaration](https://apis.io/examples/federal-emergency-management-agency/disaster-declaration/)
 
-#### Properties
+#### Collections (5)
 
-- [Documentation](https://www.fema.gov/about/openfema/api)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/openapi/openfema.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Rules](https://raw.githubusercontent.com/api-evangelist/federal-emergency-management-agency/refs/heads/main/rules/openfema-rules.yml)
-- [Postman Collection](collections/openfema.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openfema.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [OpenFEMA Assistance API](https://apis.io/collections/federal-emergency-management-agency/open-federal-emergency-management-agency-assistance-api/)
+- [OpenFEMA Assistance Disasters API](https://apis.io/collections/federal-emergency-management-agency/open-federal-emergency-management-agency-disasters-api/)
+- [OpenFEMA Assistance Metadata API](https://apis.io/collections/federal-emergency-management-agency/open-federal-emergency-management-agency-metadata-api/)
+- [OpenFEMA Assistance NFIP API](https://apis.io/collections/federal-emergency-management-agency/open-federal-emergency-management-agency-nfip-api/)
+- [OpenFEMA API](https://apis.io/collections/federal-emergency-management-agency/open-openfema/)
 
-- [GitHub Organization](https://github.com/FEMA)
-- [LinkedIn](https://www.linkedin.com/company/fema)
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Federal Emergency Management Agency — openfema rules](https://apis.io/rules/federal-emergency-management-agency/openfema-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Federal Emergency Management Agency Domain Security](https://apis.io/security/federal-emergency-management-agency/federal-emergency-management-agency-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Federal Emergency Management Agency Plans Pricing](https://apis.io/plans/federal-emergency-management-agency/federal-emergency-management-agency-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Federal Emergency Management Agency Rate Limits](https://apis.io/rate-limits/federal-emergency-management-agency/federal-emergency-management-agency-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Federal Emergency Management Agency Finops](https://apis.io/finops/federal-emergency-management-agency/federal-emergency-management-agency-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.fema.gov/)
 - [Documentation](https://www.fema.gov/about/openfema/api)
+- [Blog](https://www.fema.gov/about/news-multimedia/blog)
+- [GitHub](https://github.com/FEMA)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 21.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 43.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/federal-emergency-management-agency/](https://apis.io/providers/federal-emergency-management-agency/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Federal Emergency Management Agency: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/federal-emergency-management-agency/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
